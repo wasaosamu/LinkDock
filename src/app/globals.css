@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #0a0f1d;
+  color: #e2e8f0;
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* 背景: ダークネイビー + うっすらグリッド + 上下の発光グラデ */
+.bg-cyber-stage {
+  background-color: #0a0f1d;
+  background-image:
+    radial-gradient(1200px 600px at 10% -10%, rgba(34, 211, 238, 0.10), transparent 60%),
+    radial-gradient(900px 500px at 110% 10%, rgba(168, 85, 247, 0.10), transparent 60%),
+    linear-gradient(rgba(34, 211, 238, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 211, 238, 0.05) 1px, transparent 1px);
+  background-size: auto, auto, 48px 48px, 48px 48px;
+  background-position: 0 0, 0 0, 0 0, 0 0;
+}
+
+.glow-text-cyan {
+  text-shadow: 0 0 8px rgba(34, 211, 238, 0.55), 0 0 24px rgba(34, 211, 238, 0.25);
+}
+
+.glow-text-purple {
+  text-shadow: 0 0 8px rgba(168, 85, 247, 0.55), 0 0 24px rgba(168, 85, 247, 0.25);
+}
+
+/* スクロールバーを薄く */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-thumb {
+  background: rgba(34, 211, 238, 0.18);
+  border-radius: 999px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(34, 211, 238, 0.35);
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* セレクション色 */
+::selection {
+  background: rgba(34, 211, 238, 0.35);
+  color: #ffffff;
+}

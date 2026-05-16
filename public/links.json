@@ -1,0 +1,102 @@
+{
+  "title": "LinkDock",
+  "subtitle": "Hyperlink Command Center / ハイパーリンク・コマンドセンター",
+  "categories": [
+    {
+      "id": "dev",
+      "label": "DEVELOPMENT / 開発",
+      "links": [
+        {
+          "id": "gh",
+          "title": "GitHub",
+          "url": "https://github.com",
+          "description": "Source hosting & code review for engineering teams. / ソースコード・ホスティングとコードレビュー。",
+          "tags": ["git", "code", "開発"],
+          "icon": "GH",
+          "accent": "cyan"
+        },
+        {
+          "id": "docs",
+          "title": "MDN Web Docs",
+          "url": "https://developer.mozilla.org",
+          "description": "Web platform reference. / ウェブ標準のリファレンス。",
+          "tags": ["docs", "web", "リファレンス"],
+          "icon": "MD",
+          "accent": "cyan"
+        },
+        {
+          "id": "stack",
+          "title": "Stack Overflow",
+          "url": "https://stackoverflow.com",
+          "description": "Q&A for programmers. / プログラマー向けの Q&A コミュニティ。",
+          "tags": ["qa", "質問"],
+          "icon": "SO",
+          "accent": "cyan"
+        }
+      ]
+    },
+    {
+      "id": "ai",
+      "label": "AI / RESEARCH / AI・調査",
+      "links": [
+        {
+          "id": "claude",
+          "title": "Claude",
+          "url": "https://claude.ai",
+          "description": "Anthropic's conversational AI assistant. / Anthropic 製の対話型 AI アシスタント。",
+          "tags": ["ai", "chat", "対話"],
+          "icon": "CL",
+          "accent": "purple"
+        },
+        {
+          "id": "anthropic",
+          "title": "Anthropic Docs",
+          "url": "https://docs.claude.com",
+          "description": "Claude API & SDK references. / Claude API と SDK のドキュメント。",
+          "tags": ["api", "docs", "ドキュメント"],
+          "icon": "AN",
+          "accent": "purple"
+        }
+      ]
+    },
+    {
+      "id": "ops",
+      "label": "OPS / DASHBOARDS / 運用・ダッシュボード",
+      "links": [
+        {
+          "id": "runbook",
+          "title": "Runbook",
+          "url": "https://runbook.example.dev",
+          "description": "On-call incident response playbook. / オンコール時のインシデント対応手順書。",
+          "tags": ["ops", "oncall", "障害対応"],
+          "icon": "RB",
+          "accent": "magenta"
+        },
+        {
+          "id": "grafana",
+          "title": "Grafana",
+          "url": "https://grafana.example.dev",
+          "description": "Metrics & dashboards. / メトリクスとダッシュボード。",
+          "tags": ["metrics", "監視"],
+          "icon": "GR",
+          "accent": "magenta"
+        }
+      ]
+    },
+    {
+      "id": "local",
+      "label": "LOCAL TOOLS / ローカルツール",
+      "links": [
+        {
+          "id": "localhost-3000",
+          "title": "Dev Server",
+          "url": "http://localhost:3000",
+          "description": "Front-end dev server. / フロントエンド開発サーバー。",
+          "tags": ["local", "ローカル"],
+          "icon": "DV",
+          "accent": "cyan"
+        }
+      ]
+    }
+  ]
+}

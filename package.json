@@ -1,0 +1,73 @@
+{
+  "name": "linkdock",
+  "version": "0.1.0",
+  "private": true,
+  "description": "LinkDock — portable cyber-modern hyperlink launcher built with Next.js + Electron",
+  "main": "electron/main.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "electron": "electron .",
+    "electron:dev": "concurrently -k -n NEXT,ELEC -c blue,magenta \"npm:dev\" \"wait-on -t 30000 http://localhost:3000 && cross-env NODE_ENV=development electron .\"",
+    "electron:build": "cross-env NODE_ENV=production next build && electron-builder --win --x64",
+    "electron:build:portable": "cross-env NODE_ENV=production next build && electron-builder --win portable --x64"
+  },
+  "dependencies": {
+    "next": "^15.5.18",
+    "react": "^19.0.6",
+    "react-dom": "^19.0.6"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^9.1.0",
+    "cross-env": "^7.0.3",
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8",
+    "eslint": "^9.14.0",
+    "eslint-config-next": "^15.5.18",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
+    "typescript": "^5.6.3",
+    "wait-on": "^8.0.1"
+  },
+  "build": {
+    "appId": "dev.linkdock.app",
+    "productName": "LinkDock",
+    "asar": true,
+    "files": [
+      "out/**/*",
+      "electron/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "links.json",
+        "to": "links.json"
+      }
+    ],
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": [
+        { "target": "nsis", "arch": ["x64"] },
+        { "target": "portable", "arch": ["x64"] }
+      ],
+      "artifactName": "${productName}-${version}-${arch}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "deleteAppDataOnUninstall": false
+    },
+    "portable": {
+      "artifactName": "${productName}-${version}-portable.exe"
+    }
+  }
+}
